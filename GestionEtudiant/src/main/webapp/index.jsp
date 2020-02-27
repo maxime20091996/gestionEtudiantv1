@@ -1,43 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.Date"%>
-<!DOCTYPE html>
-<html>
-<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <style type="text/css">
   <%@include file="../css/style.css" %>
+  <%@include file="../js/style.js" %>
 </style>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script></script>
-<meta charset="ISO-8859-1">
-<title>AUTHENTIFICATION</title>
-</head>
-<body>
-	<h1>AUTHENTIFICATION</h1>
-	
-	<!-- On intègre un formulaire à la page HTML -->
-	<form id="test" action="login" method="post">
-		<div class="login">
-			<p for="login">login :</p> <input type="text" id="login"
-				name="login" required>
+<!-- ---- Include the above in your HEAD tag -------- -->
 
-			<p for="password">password :</p> <input type="password" id="password"
-				name="password" required>
-		<input type="submit" value="Envoyer">
-		</div>
-	</form>
-	<form  action="login" method="post">
-	  <div class="form-group">
-	    <label for="login">Login</label>
-	    <input type="text" class="form-control" id="login" placeholder="login" name="login">
-	  </div>
-	  <div class="form-group">
-	    <label for="password">Password</label>
-	    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-	  </div>
-	  <button type="submit" class="btn btn-primary">Envoyer</button>
-	</form>
-</body>
-</html>
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" action="login" method="post">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input name="login" type="text" id="inputEmail" class="form-control" placeholder="Login" required autofocus>
+                <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+        
+        </div><!-- /card-container -->
+    </div><!-- /container -->

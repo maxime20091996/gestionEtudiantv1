@@ -13,4 +13,11 @@
   	<servlet-name>AuthentificationServlet</servlet-name>
   	<servlet-class>eu.ensup.gestionetudiant.presentation.AuthentificationServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>liste-etudiants</display-name>
+  	<servlet-name>ListeEtudiantsServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.ListeEtudiantsServlet</servlet-class>
+  </servlet>
 </web-app>
