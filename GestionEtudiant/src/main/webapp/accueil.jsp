@@ -12,25 +12,22 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	<meta charset="ISO-8859-1">
-<title>Profil</title>
+	<title>Profil</title>
 </head>
 <body>
 	<%
 		Direction d = (Direction) session.getAttribute("directionSession");
 	%>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Gestion Etudiants <%=d.getLogin() %></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active" style="padding-right: 10px">
-        <a class="nav-link" href="index.jsp">Déconnexion <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
+ 		<a class="navbar-brand" href="accueil.jsp">Gestion Etudiants <%=d.getLogin() %></a>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active" style="padding-right: 10px">
+					<a class="nav-link" href="index.jsp">Déconnexion <span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 <div>
 	<div class="row">
@@ -45,14 +42,14 @@
 		  <img src="./images/accueil/book.jpg" class="card-img-top" alt="Information étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Information étudiant</h5>
-    		<a href="#" class="stretched-link"></a>
+    		<a href="recherche-detail-etudiant" class="stretched-link"></a>
 		  </div>
 		</div>
 		<div class="card" style="width: 18rem;">
 		  <img src="./images/accueil/children.jpg" class="card-img-top" alt="Supprimer étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Supprimer étudiant</h5>
-    		<a href="#" class="stretched-link"></a>
+    		<a href="supprimer-etudiant" class="stretched-link"></a>
 		  </div>
 		</div>
 	</div>
@@ -68,7 +65,7 @@
 		  <img src="./images/accueil/laptop.jpg" class="card-img-top" alt="Ajout étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Ajouter un étudiant</h5>
-    		<a href="#" class="stretched-link"></a>
+    		<a href="ajouter-etudiant" class="stretched-link"></a>
 		  </div>
 		</div>
 		<div class="card" style="width: 18rem;">

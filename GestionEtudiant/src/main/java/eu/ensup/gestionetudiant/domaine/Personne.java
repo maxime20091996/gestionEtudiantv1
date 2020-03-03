@@ -67,5 +67,10 @@ public class Personne {
 	public Personne() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + ", adresse=" + adresse
+				+ ", telephone=" + telephone + "]";
+	}
 	
 }

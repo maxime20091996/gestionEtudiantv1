@@ -1,9 +1,6 @@
 package eu.ensup.gestionetudiant.presentation;
 
-import java.io.Console;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,16 +14,16 @@ import eu.ensup.gestionetudiant.domaine.Etudiant;
 import eu.ensup.gestionetudiant.service.DirectionService;
 
 /**
- * Servlet implementation class ListeEtudiants
+ * Servlet implementation class SuppressionEtudiantServlet
  */
-@WebServlet("/liste-etudiants")
-public class ListeEtudiantsServlet extends HttpServlet {
+@WebServlet("/supprimer-etudiant")
+public class SuppressionEtudiantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListeEtudiantsServlet() {
+    public SuppressionEtudiantServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,23 +33,8 @@ public class ListeEtudiantsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		DirectionService service = new DirectionService();
-		List<Etudiant> listeEtudiants = service.listerEtudiants();
-		
-		if (!(listeEtudiants.isEmpty())) {
-			System.out.println(listeEtudiants);
-			RequestDispatcher rs = request.getRequestDispatcher("listeEtudiants.jsp");
-			HttpSession maSession = request.getSession();
-			maSession.setAttribute("listeEtudiants", listeEtudiants);
-			rs.forward(request, response);
-		} else {
-			
-			RequestDispatcher rs = request.getRequestDispatcher("error.jsp");
-			rs.include(request, response);
-		}
-		
+		RequestDispatcher rs = request.getRequestDispatcher("suppressionEtudiant.jsp");
+		rs.forward(request, response);	
 	}
 
 	/**
@@ -60,7 +42,19 @@ public class ListeEtudiantsServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		int idEtudiant = Integer.parseInt(request.getParameter("idEtudiant")); 
+		DirectionService service = new DirectionService();
+		int supp = service.supprimerEtudiant(idEtudiant);
+		//Mettre en place une redirection selon la reponse html
+		if (supp == 1) {
+			RequestDispatcher rs = request.getRequestDispatcher("messageSuppression.jsp");
+			rs.forward(request, response);
+		} else {
+			RequestDispatcher rs = request.getRequestDispatcher("erreurSuppression.jsp");
+			rs.forward(request, response);
+		}
+		
+		
+		}
 
 }

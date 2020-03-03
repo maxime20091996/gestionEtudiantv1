@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>Archetype Created Web Application</display-name>
+  <servlet-mapping>
+  	<servlet-name>DetailEtudiantServlet</servlet-name>
+  	<url-pattern>/DetailEtudiantServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RechercheDetailEtudiantServlet</servlet-name>
+  	<url-pattern>/RechercheDetailEtudiantServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SuppressionEtudiantServlet</servlet-name>
+  	<url-pattern>/SuppressionEtudiantServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AjouterEtudiant</servlet-name>
+  	<url-pattern>/AjouterEtudiant</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -19,5 +35,33 @@
   	<display-name>liste-etudiants</display-name>
   	<servlet-name>ListeEtudiantsServlet</servlet-name>
   	<servlet-class>eu.ensup.gestionetudiant.presentation.ListeEtudiantsServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>DetailEtudiantServlet</display-name>
+  	<servlet-name>DetailEtudiantServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.DetailEtudiantServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>RechercheDetailEtudiantServlet</display-name>
+  	<servlet-name>RechercheDetailEtudiantServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.RechercheDetailEtudiantServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>SuppressionEtudiantServlet</display-name>
+  	<servlet-name>SuppressionEtudiantServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.SuppressionEtudiantServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>AjouterEtudiant</display-name>
+  	<servlet-name>AjouterEtudiant</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.AjouterEtudiant</servlet-class>
   </servlet>
 </web-app>

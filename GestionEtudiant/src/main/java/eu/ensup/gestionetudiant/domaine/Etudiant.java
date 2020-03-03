@@ -50,4 +50,10 @@ public class Etudiant extends Personne {
 	public Etudiant() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "Etudiant [dateNaissance=" + dateNaissance + ", cours=" + cours + "]";
+	}
+	
 }
