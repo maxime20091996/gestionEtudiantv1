@@ -48,5 +48,12 @@ public class CoursDao implements ICoursDao {
 			return 0;
 		}
 	}
+	
+	public Cours lireInfoCours(int idCours) {
+		emf = Persistence.createEntityManagerFactory("gestion-etu");
+		em = emf.createEntityManager();
+		Cours cours = em.getReference(Cours.class, idCours);
+		return cours;
+	}
 
 }

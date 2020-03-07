@@ -14,8 +14,20 @@
   	<url-pattern>/SuppressionEtudiantServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>AjouterEtudiant</servlet-name>
-  	<url-pattern>/AjouterEtudiant</url-pattern>
+  	<servlet-name>AjouterEtudiantServlet</servlet-name>
+  	<url-pattern>/AjouterEtudiantServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RechercheModifierEtudiantServlet</servlet-name>
+  	<url-pattern>/RechercheModifierEtudiantServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ModifierEtudiantServlet</servlet-name>
+  	<url-pattern>/ModifierEtudiantServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AjouterEtudiantCoursServlet</servlet-name>
+  	<url-pattern>/AjouterEtudiantCoursServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -24,6 +36,10 @@
   <error-page>
     <error-code>500</error-code>
     <location>/500.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
   </error-page>
   <servlet>
   	<servlet-name>AuthentificationServlet</servlet-name>
@@ -60,8 +76,29 @@
   <servlet>
   	<description>
   	</description>
-  	<display-name>AjouterEtudiant</display-name>
-  	<servlet-name>AjouterEtudiant</servlet-name>
+  	<display-name>AjouterEtudiantServlet</display-name>
+  	<servlet-name>AjouterEtudiantServlet</servlet-name>
   	<servlet-class>eu.ensup.gestionetudiant.presentation.AjouterEtudiant</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>RechercheModifierEtudiantServlet</display-name>
+  	<servlet-name>RechercheModifierEtudiantServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.RechercheModifierEtudiantServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ModifierEtudiantServlet</display-name>
+  	<servlet-name>ModifierEtudiantServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.ModifierEtudiantServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>AjouterEtudiantCoursServlet</display-name>
+  	<servlet-name>AjouterEtudiantCoursServlet</servlet-name>
+  	<servlet-class>eu.ensup.gestionetudiant.presentation.AjouterEtudiantCoursServlet</servlet-class>
   </servlet>
 </web-app>

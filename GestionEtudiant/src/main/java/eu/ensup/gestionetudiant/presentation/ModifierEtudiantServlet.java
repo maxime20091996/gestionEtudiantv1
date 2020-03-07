@@ -1,9 +1,6 @@
 package eu.ensup.gestionetudiant.presentation;
 
-import java.io.Console;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,16 +14,16 @@ import eu.ensup.gestionetudiant.domaine.Etudiant;
 import eu.ensup.gestionetudiant.service.DirectionService;
 
 /**
- * Servlet implementation class ListeEtudiants
+ * Servlet implementation class ModifierEtudiantServlet
  */
-@WebServlet("/liste-etudiants")
-public class ListeEtudiantsServlet extends HttpServlet {
+@WebServlet("/modifier-etudiant")
+public class ModifierEtudiantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListeEtudiantsServlet() {
+    public ModifierEtudiantServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,22 +33,7 @@ public class ListeEtudiantsServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		DirectionService service = new DirectionService();
-		List<Etudiant> listeEtudiants = service.listerEtudiants();
-		
-		if (!(listeEtudiants.isEmpty())) {
-			System.out.println(listeEtudiants);
-			RequestDispatcher rs = request.getRequestDispatcher("listeEtudiants.jsp");
-			HttpSession maSession = request.getSession();
-			maSession.setAttribute("listeEtudiants", listeEtudiants);
-			rs.forward(request, response);
-		} else {
-			
-			RequestDispatcher rs = request.getRequestDispatcher("error.jsp");
-			rs.include(request, response);
-		}
-		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -59,7 +41,29 @@ public class ListeEtudiantsServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		int id = Integer.parseInt(request.getParameter("idEtudiant"));
+		String nom = request.getParameter("nom");
+		String prenom = request.getParameter("prenom");
+		String mail = request.getParameter("mail");
+		String adresse = request.getParameter("adresse");
+		int telephone = Integer.parseInt(request.getParameter("telephone")); 
+		String dateNaissance = request.getParameter("dateNaissance");
+				
+		DirectionService service = new DirectionService();
+		
+		Etudiant etudiantModifie = new Etudiant(id, nom, prenom, mail, adresse, telephone, dateNaissance);
+		int etu = service.modifierEtudiant(etudiantModifie);
+		
+		if (etu < 0) {
+			System.out.println(etu);
+			RequestDispatcher rs = request.getRequestDispatcher("accueil.jsp");
+			
+			rs.forward(request, response);
+		} else {
+			
+			RequestDispatcher rs = request.getRequestDispatcher("rechercheModificationEtudiant.jsp");
+			rs.include(request, response);
+		}
 	}
 
 }

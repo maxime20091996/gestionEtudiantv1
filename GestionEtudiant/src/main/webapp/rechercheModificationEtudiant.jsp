@@ -3,8 +3,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@ page import="eu.ensup.gestionetudiant.domaine.Etudiant" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +12,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<meta charset="ISO-8859-1">
-	<title>Profil</title>
+	<title>Rechercher un étudiant</title>
 </head>
 <body>
 
@@ -42,20 +40,24 @@
   		</div>
 	</nav>
 	<div class="jumbotron">
-	  <h1>Recherche étudiant</h1>
+	  <h1>Recherche pour la modification d'étudiant</h1>
+	</div>
+	<div class="container">
+		<div class="card card-container">
+			<div class="row">
+				<h2>Entrer l'identifiant : </h2>
+				<form action="recherche-modifier-etudiant" method="post">
+					<div class="search">
+						<input type="number" class="form-control input-sm" maxlength="50" placeholder="Identifiant étudiant" name="idEtudiant"/>
+						<button type="submit" class="btn btn-primary btn-sm">Rechercher</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 	
-	<meta http-equiv="refresh" content="3;URL=accueil.jsp">
-	<div class="container">
-        <div class="card card-container">
-        	<h2>Erreur lors de la recherche</h2>
-            <h4>L'étudiant n'existe pas</h4>
-            <h6>Redirection</h6>
-            <div class="spinner-border" role="status">
-			  <span class="sr-only">Loading...</span>
-			</div>
-        <div class="countdown" data-toggle="circularcountdown" data-color="belize-hole" data-to="12/25/2016"></div>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+	<div class="container">		
+		
+	</div>
 </body>
 </html>

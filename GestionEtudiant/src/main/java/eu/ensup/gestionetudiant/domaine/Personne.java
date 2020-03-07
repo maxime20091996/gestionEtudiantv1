@@ -56,6 +56,7 @@ public class Personne {
 	public void setTelephone(int telephone) {
 		this.telephone = telephone;
 	}
+	
 	public Personne(String nom, String prenom, String mail, String adresse, int telephone) {
 		super();
 		this.nom = nom;
@@ -64,13 +65,18 @@ public class Personne {
 		this.adresse = adresse;
 		this.telephone = telephone;
 	}
+	
+	public Personne(int id, String nom, String prenom, String mail, String adresse, int telephone) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.mail = mail;
+		this.adresse = adresse;
+		this.telephone = telephone;
+	}
+	
 	public Personne() {
 		super();
 	}
-	@Override
-	public String toString() {
-		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + ", adresse=" + adresse
-				+ ", telephone=" + telephone + "]";
-	}
-	
 }

@@ -42,20 +42,30 @@
   		</div>
 	</nav>
 	<div class="jumbotron">
-	  <h1>Recherche étudiant</h1>
+	  <h1>Modification étudiant</h1>
 	</div>
 	
-	<meta http-equiv="refresh" content="3;URL=accueil.jsp">
-	<div class="container">
-        <div class="card card-container">
-        	<h2>Erreur lors de la recherche</h2>
-            <h4>L'étudiant n'existe pas</h4>
-            <h6>Redirection</h6>
-            <div class="spinner-border" role="status">
-			  <span class="sr-only">Loading...</span>
-			</div>
-        <div class="countdown" data-toggle="circularcountdown" data-color="belize-hole" data-to="12/25/2016"></div>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+	<div class="container">		
+		
+				
+				<div class="card card-container">
+				<c items="${etudiant}" var="etudiant">
+				<p id="profile-name" class="profile-name-card">Formulaire d'ajout d'étudiant</p>
+					<form action="modifier-etudiant" method="post">
+						<input name="idEtudiant" type="number" id="inputEmail" class="form-control" placeholder="Nom" value="${etudiant.id}" autofocus readonly>
+						<input name="nom" type="text" id="inputEmail" class="form-control" placeholder="Nom" value="${etudiant.nom}" autofocus>
+		                <input name="prenom" type="text" id="inputEmail" class="form-control" placeholder="Prenom" value="${etudiant.prenom}" required autofocus>
+		                <input name="mail" type="text" id="inputEmail" class="form-control" placeholder="Mail" value="${etudiant.mail}" required autofocus>
+		                <input name="adresse" type="text" id="inputEmail" class="form-control" placeholder="Adresse" value="${etudiant.adresse}" required autofocus>
+		                <input name="telephone" type="number" id="inputEmail" class="form-control" placeholder="Téléphone" value="${etudiant.telephone}" required autofocus>
+		                <input name="dateNaissance" type="text" id="inputEmail" class="form-control" placeholder="Date de Naissance" value="${etudiant.dateNaissance}" required autofocus>
+	                	<div class="container">
+	                		<button class="btn btn-lg btn-primary btn-block" type="submit">Modifier</button>
+	                	</div>	                		                		
+	                </form>  
+	                </c>
+             	</div>  
+				
+	</div>
 </body>
 </html>

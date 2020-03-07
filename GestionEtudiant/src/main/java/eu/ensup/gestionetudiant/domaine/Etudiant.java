@@ -47,13 +47,21 @@ public class Etudiant extends Personne {
 		this.dateNaissance = dateNaissance;
 	}
 	
+	public Etudiant(int id, String nom, String prenom, String mail, String adresse, int telephone, String dateNaissance,
+			List<Cours> cours) {
+		super(id, nom, prenom, mail, adresse, telephone);
+		this.dateNaissance = dateNaissance;
+		this.cours = cours;
+	}
+	
+	
+	public Etudiant(int id, String nom, String prenom, String mail, String adresse, int telephone,
+			String dateNaissance) {
+		super(id, nom, prenom, mail, adresse, telephone);
+		this.dateNaissance = dateNaissance;
+	}
+	
 	public Etudiant() {
 		super();
 	}
-	
-	@Override
-	public String toString() {
-		return "Etudiant [dateNaissance=" + dateNaissance + ", cours=" + cours + "]";
-	}
-	
 }

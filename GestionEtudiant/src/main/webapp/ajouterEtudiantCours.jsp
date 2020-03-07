@@ -3,8 +3,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@ page import="eu.ensup.gestionetudiant.domaine.Etudiant" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,10 +12,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<meta charset="ISO-8859-1">
-	<title>Profil</title>
+	<title>Rechercher un étudiant</title>
 </head>
 <body>
-
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href="accueil.jsp">Gestion Etudiants</a>
 	  	<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -42,20 +39,33 @@
   		</div>
 	</nav>
 	<div class="jumbotron">
-	  <h1>Recherche étudiant</h1>
+	  <h1>Ajouter un étudiant à un cours</h1>
 	</div>
-	
-	<meta http-equiv="refresh" content="3;URL=accueil.jsp">
 	<div class="container">
         <div class="card card-container">
-        	<h2>Erreur lors de la recherche</h2>
-            <h4>L'étudiant n'existe pas</h4>
-            <h6>Redirection</h6>
-            <div class="spinner-border" role="status">
-			  <span class="sr-only">Loading...</span>
-			</div>
-        <div class="countdown" data-toggle="circularcountdown" data-color="belize-hole" data-to="12/25/2016"></div>
+            <p id="profile-name" class="profile-name-card">Formulaire d'ajout d'étudiant</p>
+            <form action="ajouter-etudiant-cours" method="post">
+	            <select name="etudiant" class="form-control">
+	              <c:forEach var="listeEtudiant" items="${listeEtudiant}">
+	                <option>
+	                	<c:out value="${listeEtudiant.id}" />	           
+	                </option>
+	              </c:forEach>
+	            </select>
+	            <select name="cours" class="form-control">
+	              <c:forEach var="listeCours" items="${listeCours}">
+	                <option>
+	                  <c:out value="${listeCours.idCours}" />
+	                </option>
+	              </c:forEach>
+	            </select>
+	            <input type="submit" name="add" value="Add" />
+            </form>
         </div><!-- /card-container -->
     </div><!-- /container -->
+	
+	<div class="container">		
+		
+	</div>
 </body>
 </html>

@@ -1,11 +1,10 @@
-package eu.ensup.gestionetudiant.dao;
+package eu.ensup.gestionetudiant.service;
 
 import java.util.List;
 
 import eu.ensup.gestionetudiant.domaine.Cours;
-import eu.ensup.gestionetudiant.domaine.Etudiant;
 
-public interface ICoursDao {
+public interface ICoursService {
 
 	/**
 	 * @return une liste des cours
@@ -26,3 +25,4 @@ public interface ICoursDao {
 	 */
 	public Cours lireInfoCours(int idCours);
 }
+
