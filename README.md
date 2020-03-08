@@ -21,7 +21,7 @@ Aller dans `target\checkout\GestionEtudiant`
 Exécuter la commande :
 `mvn install`
 
-Aller dans le dossier target et récupérer le war génréré.
+Aller dans le dossier `target` et récupérer le war génréré.
 
 <b>1- Deplacer le fichier DemoFormation.war dans le dossier `webapps` de Tomcat </b>
 
