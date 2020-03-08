@@ -25,7 +25,7 @@ Aller dans le dossier `target` et récupérer le war génréré.
 
 <b>1- Deplacer le fichier `GestionEtudiant.war` dans le dossier `webapps` de Tomcat </b>
 
-<b>2- Executer startup.bat situé dans le dossier `bin` de tomcat </b>
+<b>2- Executer `startup.bat` situé dans le dossier `bin` de tomcat </b>
 
 <b>3- Dans l'url du navigateur internet, entrer la commande suivante : http://localhost:8080/GestionEtudiant/ </b>
 
