@@ -4,7 +4,7 @@
 
 a- TomcatServer 9.0 | Utilisation de Java v.8.x - 
 
-b- Créer une base mysql à l'aide de wamp qui se nomera `demoformation` et importer le fichier gestionetudiant.sql 
+b- Créer une base mysql à l'aide de wamp qui se nomera `gestionetudiant` et importer le fichier gestionetudiant.sql 
 permettant d'avoir des données exemples et de connection.
 
 <b>0bis- Récupération du war</b>
