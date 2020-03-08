@@ -23,7 +23,7 @@ Exécuter la commande :
 
 Aller dans le dossier `target` et récupérer le war génréré.
 
-<b>1- Deplacer le fichier DemoFormation.war dans le dossier `webapps` de Tomcat </b>
+<b>1- Deplacer le fichier `GestionEtudiant.war` dans le dossier `webapps` de Tomcat </b>
 
 <b>2- Executer startup.bat situé dans le dossier `bin` de tomcat </b>
 
