@@ -10,6 +10,10 @@ import javax.persistence.Query;
 
 import eu.ensup.gestionetudiant.domaine.Direction;
 
+/**
+ * @author benja
+ * Classe DAO génrant la connection de la direction 
+ */
 public class LoginDao {
 	// ouverture unité de persistance
 	EntityManagerFactory emf;

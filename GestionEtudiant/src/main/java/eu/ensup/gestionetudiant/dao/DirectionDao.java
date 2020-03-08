@@ -12,6 +12,10 @@ import javax.persistence.Query;
 import eu.ensup.gestionetudiant.domaine.Cours;
 import eu.ensup.gestionetudiant.domaine.Etudiant;
 
+/**
+ * @author benja
+ * Classe DAO contenant toutes les méthodes utiles à la direction concernant la gestion des étudiants
+ */
 public class DirectionDao implements IDirectionDao {
 		// ouverture unité de persistance
 		EntityManagerFactory emf;

@@ -2,6 +2,10 @@ package eu.ensup.gestionetudiant.domaine;
 
 import javax.persistence.Entity;
 
+/**
+ * @author benja
+ * Classe Enseignant héritant de la classe Personne
+ */
 @Entity
 public class Enseignant extends Personne {
 

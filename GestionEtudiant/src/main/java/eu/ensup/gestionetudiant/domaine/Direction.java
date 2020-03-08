@@ -2,6 +2,10 @@ package eu.ensup.gestionetudiant.domaine;
 
 import javax.persistence.Entity;
 
+/**
+ * @author benja
+ * Classe Direction héritant de la classe Personne
+ */
 @Entity
 public class Direction extends Personne {
 

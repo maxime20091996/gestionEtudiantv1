@@ -12,7 +12,7 @@ import javax.persistence.ManyToMany;
 
 /**
  * @author benja
- *
+ * Classe Etudiant héritant de la classe Personne
  */
 
 @Entity

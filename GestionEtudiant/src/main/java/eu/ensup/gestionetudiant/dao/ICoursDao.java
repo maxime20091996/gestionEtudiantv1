@@ -5,6 +5,11 @@ import java.util.List;
 import eu.ensup.gestionetudiant.domaine.Cours;
 import eu.ensup.gestionetudiant.domaine.Etudiant;
 
+/**
+ * @author benja
+ * Interface du DAO de l'entité Cours
+ *
+ */
 public interface ICoursDao {
 
 	/**

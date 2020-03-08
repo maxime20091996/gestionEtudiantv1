@@ -7,6 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+/**
+ * @author benja
+ * Classe personne
+ * Classe mère des classes Enseignant, Etudiant et Direction
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Personne {
