@@ -42,26 +42,74 @@
 	  <h1>Ajouter un étudiant à un cours</h1>
 	</div>
 	<div class="container">
-        <div class="card card-container">
-            <p id="profile-name" class="profile-name-card">Formulaire d'ajout d'étudiant</p>
-            <form action="ajouter-etudiant-cours" method="post">
-	            <select name="etudiant" class="form-control">
-	              <c:forEach var="listeEtudiant" items="${listeEtudiant}">
-	                <option>
-	                	<c:out value="${listeEtudiant.id}" />	           
-	                </option>
-	              </c:forEach>
-	            </select>
-	            <select name="cours" class="form-control">
-	              <c:forEach var="listeCours" items="${listeCours}">
-	                <option>
-	                  <c:out value="${listeCours.idCours}" />
-	                </option>
-	              </c:forEach>
-	            </select>
-	            <input type="submit" name="add" value="Add" />
-            </form>
-        </div><!-- /card-container -->
+		<div class="row">
+	        <div class="card card-container">
+	            <p id="profile-name" class="profile-name-card">Liste des cours</p>
+	            <table class="table table-striped table-dark">
+				  	<thead>
+					    <tr>
+							<!-- <th scope="col">#</th> -->
+							<th scope="col">Id</th>
+							<th scope="col">Libelle</th>
+							<th scope="col">Durée</th>
+					    </tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${listeCours}" var="cours">
+							<tr>
+								<!-- <th scope="row"><%-- out.println(i); --%></th>  -->
+								<td>${cours.idCours}</td>
+								<td>${cours.libelle}</td>
+								<td>${cours.nbHeure} Hr</td>
+							</tr>
+						</c:forEach>
+				    </tbody>
+				</table>
+	        </div><!-- /card-container -->
+	        <div class="card card-container">
+	            <p id="profile-name" class="profile-name-card">Formulaire d'ajout d'étudiant</p>
+	            <form class="form-signin" action="ajouter-etudiant-cours" method="post">
+		            <select name="etudiant" class="form-control">
+		              <c:forEach var="listeEtudiant" items="${listeEtudiant}">
+		                <option>
+		                	<c:out value="${listeEtudiant.id}" />	           
+		                </option>
+		              </c:forEach>
+		            </select>
+		            <select name="cours" class="form-control">
+		              <c:forEach var="listeCours" items="${listeCours}">
+		                <option>
+		                  <c:out value="${listeCours.idCours}" />
+		                </option>
+		              </c:forEach>
+		            </select>
+		            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Modifier</button>
+	            </form>
+	        </div><!-- /card-container -->
+	        <div class="card card-container">
+	            <p id="profile-name" class="profile-name-card">Liste des étudiants</p>
+	            <table class="table table-striped table-dark">
+				  	<thead>
+					    <tr>
+							<!-- <th scope="col">#</th> -->
+							<th scope="col">Id</th>
+							<th scope="col">Nom</th>
+							<th scope="col">Prenom</th>
+					    </tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${listeEtudiants}" var="etudiant">
+							<tr>
+								<!-- <th scope="row"><%-- out.println(i); --%></th>  -->
+								<td>${etudiant.id}</td>
+								<td>${etudiant.nom}</td>
+								<td>${etudiant.prenom}</td>
+							</tr>
+						</c:forEach>
+				    </tbody>
+				</table>
+	        </div><!-- /card-container -->
+        </div><!-- /row -->
     </div><!-- /container -->
 	
 	<div class="container">		

@@ -30,23 +30,23 @@
 		</div>
 	</nav>
 
-<div>
-	<div class="row">
-		<div class="card" style="width: 18rem;">
+<div class="container">
+	<div class="row" style="margin-top: -50px;margin-bottom: -70px;">
+		<div class="card" style="width: 220px;">
 		  <img src="./images/accueil/people.jpg" class="card-img-top" alt="Liste étudiants">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Lister les étudiants</h5>
     		<a href="liste-etudiants" class="stretched-link"></a>
 		  </div>
 		</div>
-		<div class="card" style="width: 18rem;">
+		<div class="card" style="width: 220px;">
 		  <img src="./images/accueil/book.jpg" class="card-img-top" alt="Information étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Information étudiant</h5>
     		<a href="recherche-detail-etudiant" class="stretched-link"></a>
 		  </div>
 		</div>
-		<div class="card" style="width: 18rem;">
+		<div class="card" style="width: 220px;">
 		  <img src="./images/accueil/children.jpg" class="card-img-top" alt="Supprimer étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Supprimer étudiant</h5>
@@ -54,22 +54,22 @@
 		  </div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="card" style="width: 18rem;">
+	<div class="row" style="margin-top: -50px;margin-bottom: -70px;">
+		<div class="card" style="width: 220px;">
 		  <img src="./images/accueil/geometry.jpg" class="card-img-top" alt="Modifié étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Modifier étudiant</h5>
     		<a href="recherche-modifier-etudiant" class="stretched-link"></a>
 		  </div>
 		</div>
-		<div class="card" style="width: 18rem;">
+		<div class="card" style="width: 220px;">
 		  <img src="./images/accueil/laptop.jpg" class="card-img-top" alt="Ajout étudiant">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Ajouter un étudiant</h5>
     		<a href="ajouter-etudiant" class="stretched-link"></a>
 		  </div>
 		</div>
-		<div class="card" style="width: 18rem;">
+		<div class="card" style="width: 220px;">
 		  <img src="./images/accueil/laptop2.jpg" class="card-img-top" alt="Ajout étudiant cours">
 		  <div class="card-body">
 		    <h5 class="card-title" style="text-align: center">Ajouter un étudiant à un cours</h5>

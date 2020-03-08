@@ -14,7 +14,7 @@
 	<meta charset="ISO-8859-1">
 	<title>Ajouter un étudiant à un cours</title>
 </head>
-<body>
+<body style="background: black">
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	  <a class="navbar-brand" href="accueil.jsp">Gestion Etudiants</a>
@@ -46,7 +46,7 @@
 	        <div class="man-icon"></div>
 	        <h3 class="title">404</h3>
 	        <p class="info">Oh! Page not found</p>
-	        <input type="button" class="home-btn" onclick="accueil.jsp">HOME</input>
+	        <button type="button" class="home-btn" onclick="location.href = '/GestionEtudiant/accueil.jsp';">Accueil</button>
     	</div>
 	</div>
 </body>

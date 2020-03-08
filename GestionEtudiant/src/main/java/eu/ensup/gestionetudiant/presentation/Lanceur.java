@@ -20,14 +20,18 @@ public class Lanceur {
 		// TODO Auto-generated method stub
 		DirectionService service = new DirectionService();
 	
-		Direction direction = new Direction("Moulin", "Jean", "jeanmoulin@gmail.com", "15 rue Jean Jacques Goldman, Paris", 0203040505, "moulin", "jean");
-		Etudiant etudiant = new Etudiant("Cerdant", "Marcel", "marcelcerdant@hotmail.com", "678 av. Guy Marchand, Paris", 0102030405, "25 juin 2000");
-		Enseignant enseignant = new Enseignant("Robuchon", "Joël", "joelrobuchon@yahoo.fr", "13 bd de Ratatouille, Paris", 0102030505, "Mathématiques");
 		Cours cours = new Cours("JAVA", 3);
+		Cours cours2 = new Cours("Mathématiques", 2);
+		Cours cours3 = new Cours("AngularJS", 3);
 		ArrayList<Cours> listCours = new ArrayList<Cours>();
 		listCours.add(cours);
-		Etudiant etudiant2 = new Etudiant("Cerdant", "Marcel", "marcelcerdant@hotmail.com", "678 av. Guy Marchand, Paris", 0102030405, "25 juin 2000", listCours);
 
+		Direction direction = new Direction("Moulin", "Jean", "jeanmoulin@gmail.com", "15 rue Jean Jacques Goldman, Paris", 0203040505, "Admin", "password");
+		
+		Etudiant etudiant = new Etudiant("Cerdant", "Marcel", "marcelcerdant@hotmail.com", "678 av. Guy Marchand, Paris", 0102030405, "25 juin 2000");
+		Etudiant etudiant2 = new Etudiant("de Funès", "Louis", "louisdefunes@hotmail.com", "34 rue du Grl de Gaulle, Paris", 0102030405, "25 juin 2000", listCours);
+
+		Enseignant enseignant = new Enseignant("Robuchon", "Joël", "joelrobuchon@yahoo.fr", "13 bd de Ratatouille, Paris", 0102030505, "Mathématiques");
 		
 		// 1 : Ouverture unité de travail JPA
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("gestion-etu");
@@ -42,6 +46,8 @@ public class Lanceur {
 		 em.persist(etudiant);
 		 em.persist(enseignant);
 		 em.persist(cours);
+		 em.persist(cours2);
+		 em.persist(cours3);
 		 em.persist(etudiant2);
 		
 		// 5 : Fermeture transaction 

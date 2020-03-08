@@ -47,8 +47,7 @@
 	        <div class="man-icon"></div>
 	        <h3 class="title">500</h3>
 	        <p class="info">Oh! Page not found</p>
-	        <button type="button" class="home-btn" onclick="accueil.jsp">HOME</button>
-	        <a href="accueil.jsp" target="_blank"> <input type="button" value="Bouton"> </a>
+	        <button type="button" class="home-btn" onclick="location.href = '/GestionEtudiant/accueil.jsp';">Accueil</button>
     	</div>
 	</div>
 </body>

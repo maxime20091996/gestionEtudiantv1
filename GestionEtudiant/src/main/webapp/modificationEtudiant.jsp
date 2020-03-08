@@ -3,8 +3,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@ page import="eu.ensup.gestionetudiant.domaine.Etudiant" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +12,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<meta charset="ISO-8859-1">
-	<title>Profil</title>
+	<title>Modification de l'étudiant</title>
 </head>
 <body>
 
@@ -44,28 +42,26 @@
 	<div class="jumbotron">
 	  <h1>Modification étudiant</h1>
 	</div>
-	
+	<div class="container">					
+		<div class="card card-container">
+			<p id="profile-name" class="profile-name-card">Formulaire de modification d'un étudiant</p>
+			<c items="${etudiant}" var="etudiant">
+				<form class="form-signin" action="modifier-etudiant" method="post">
+					<input name="idEtudiant" type="number" id="inputEmail" class="form-control" placeholder="Nom" value="${etudiant.id}" autofocus readonly>
+					<input name="nom" type="text" id="inputEmail" class="form-control" placeholder="Nom" value="${etudiant.nom}" autofocus>
+	                <input name="prenom" type="text" id="inputEmail" class="form-control" placeholder="Prenom" value="${etudiant.prenom}" required autofocus>
+	                <input name="mail" type="text" id="inputEmail" class="form-control" placeholder="Mail" value="${etudiant.mail}" required autofocus>
+	                <input name="adresse" type="text" id="inputEmail" class="form-control" placeholder="Adresse" value="${etudiant.adresse}" required autofocus>
+	                <input name="telephone" type="number" id="inputEmail" class="form-control" placeholder="Téléphone" value="${etudiant.telephone}" required autofocus>
+	                <input name="dateNaissance" type="text" id="inputEmail" class="form-control" placeholder="Date de Naissance" value="${etudiant.dateNaissance}" required autofocus>
+               		
+               		<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Modifier</button>        		                		                		
+                </form>  
+			</c>
+		</div>  		
+	</div>
 	<div class="container">		
 		
-				
-				<div class="card card-container">
-				<c items="${etudiant}" var="etudiant">
-				<p id="profile-name" class="profile-name-card">Formulaire d'ajout d'étudiant</p>
-					<form action="modifier-etudiant" method="post">
-						<input name="idEtudiant" type="number" id="inputEmail" class="form-control" placeholder="Nom" value="${etudiant.id}" autofocus readonly>
-						<input name="nom" type="text" id="inputEmail" class="form-control" placeholder="Nom" value="${etudiant.nom}" autofocus>
-		                <input name="prenom" type="text" id="inputEmail" class="form-control" placeholder="Prenom" value="${etudiant.prenom}" required autofocus>
-		                <input name="mail" type="text" id="inputEmail" class="form-control" placeholder="Mail" value="${etudiant.mail}" required autofocus>
-		                <input name="adresse" type="text" id="inputEmail" class="form-control" placeholder="Adresse" value="${etudiant.adresse}" required autofocus>
-		                <input name="telephone" type="number" id="inputEmail" class="form-control" placeholder="Téléphone" value="${etudiant.telephone}" required autofocus>
-		                <input name="dateNaissance" type="text" id="inputEmail" class="form-control" placeholder="Date de Naissance" value="${etudiant.dateNaissance}" required autofocus>
-	                	<div class="container">
-	                		<button class="btn btn-lg btn-primary btn-block" type="submit">Modifier</button>
-	                	</div>	                		                		
-	                </form>  
-	                </c>
-             	</div>  
-				
 	</div>
 </body>
 </html>
