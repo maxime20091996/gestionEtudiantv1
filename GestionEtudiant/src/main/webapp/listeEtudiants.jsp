@@ -45,6 +45,7 @@
 		  	<thead>
 			    <tr>
 					<!-- <th scope="col">#</th> -->
+					<th scope="col">Id</th>
 					<th scope="col">Nom</th>
 					<th scope="col">Prenom</th>
 					<th scope="col">Mail</th>
@@ -56,6 +57,7 @@
 				<c:forEach items="${listeEtudiants}" var="etudiant">
 					<tr>
 						<!-- <th scope="row"><%-- out.println(i); --%></th>  -->
+						<td>${etudiant.id}</td>
 						<td>${etudiant.nom}</td>
 						<td>${etudiant.prenom}</td>
 						<td>${etudiant.mail}</td>
