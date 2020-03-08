@@ -30,7 +30,9 @@ Aller dans le dossier `target` et récupérer le war génréré.
 <b>3- Dans l'url du navigateur internet, entrer la commande suivante : http://localhost:8080/GestionEtudiant/ </b>
 
 <i>Identifiant pour se connecter :
+  
 Login : Admin
+
 Mot de passe : password</i>
 
 <b>Fonctionnalités présentes : </b>
