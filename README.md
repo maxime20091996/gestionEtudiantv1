@@ -36,10 +36,16 @@ Login : Admin
 Mot de passe : password</i>
 
 <b>Fonctionnalités présentes : </b>
-- Ajouter un thème à la formation
+- Identification de la direction
+- Ajouter un étudiant
+- Modifier un étudiant
+- Supprimer un étudiant
+- Lister tous les étudiants
+- Récupérer le détail d'un étudiant
+- Lier un étudiant à un cours
 
 <b>Technologies : </b>
-- servlet
+- Servlet
 - HTML
 - JSP
 - Bootstrap
