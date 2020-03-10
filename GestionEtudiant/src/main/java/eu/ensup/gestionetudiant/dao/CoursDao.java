@@ -22,7 +22,7 @@ public class CoursDao implements ICoursDao {
 	// porter de requete
 	EntityManager em;
         
-        boolean b;
+        
 	
 	public List<Cours> listerCours() {
 		emf = Persistence.createEntityManagerFactory("gestion-etu");
